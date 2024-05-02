@@ -454,180 +454,77 @@ Binary notation is fundamental for digital systems and provides the basis for co
 
 In computer systems, binary is commonly used to represent data. For example, a byte consists of 8 bits, allowing for 256 possible combinations. Binary notation, along with logical operations, forms the basis of computer arithmetic and data representation.
 
+# Numbers, Letters, and Arithmetic Logic Units (ALUs)
 
-But what about numbers with commas?
-They are called floating numbers and are represented in memory like this.
-If you want to represent 625.9
+## Representation of Numbers and Letters
+- **Floating Numbers**: Represented in memory to include numbers with commas.
+- **Letters**: Represented with numerical values using ASCII and Unicode encoding standards.
 
-What about letters?
-You represent it with numbers.
-ASCII and Unicode are character encoding standards used to represent text characters digitally.
-1. ASCII:
-    ASCII represents text characters using 7 bits, allowing for 128 (2^7) possible combinations.
-    It assigns numerical values (0 to 127) to characters, primarily for English text.
-    ASCII is limited in supporting only English characters and symbols.
-2. Unicode:
-    Unicode is a character encoding standard supporting characters from all languages and writing systems.
-    It assigns unique numerical values to each character, enabling multilingual text representation.
-    It uses 16 bits.
-    
-How computers calculate: ALU 
-An Arithmetic Logic Unit (ALU) is a fundamental component of a computer's central processing unit (CPU). It is responsible for performing arithmetic and logical operations on data that is being processed by the CPU. These operations include addition, subtraction, multiplication, division, AND, OR, and NOT operations. The ALU takes input from the CPU's registers, performs the requested operation, and then outputs the result back to the CPU. ALUs are crucial for executing computational tasks and manipulating data within a computer system.
+### ASCII
+- Utilizes 7 bits, allowing for 128 possible combinations.
+- Assigns numerical values (0 to 127) to characters, primarily for English text.
 
-The ALU has 2 units: arithmetic unit and a logic unit.
-Arithmentic unit  
-Is the responsible for handling all numerical operations in a computer.
-Let's add two binary numbers together. In the binary system, there are only for possibilities: 0
+### Unicode
+- Character encoding standard supporting characters from all languages and writing systems.
+- Assigns unique numerical values to each character, using 16 bits.
 
-1. 0 + 0 = 0
-2. 0 + 1 = 1
-3. 1 + 0 = 1
-4. 1 + 1 = 0 (you carry the 1 to the next sum)
+## Arithmetic Logic Unit (ALU)
+- Component of a computer's CPU performing arithmetic and logical operations on data.
+- Operations include addition, subtraction, multiplication, division, AND, OR, and NOT.
+- ALU consists of arithmetic and logic units.
 
-The table needed for this sum is exactly like the xor gate, which means we can use it and modify it to suit our needs. This circuit is called a half-adder. It has two inputs (a, b) and two outputs (the sum and the carry value )
-https://remnote-user-data.s3.amazonaws.com/JvRJd59EtwAUMpy6uhL7FXDgwy0apF2piOBiUnNVf4Q_zcl8_anG8n7XY2l4URDhrLWMLx3n7fkbMHQkGdCUN05TPrJm7Y0D4by6jyW8dTEp5pyoLmXfWH_G0jNiuW1H.png
+### Arithmetic Unit
+- Handles numerical operations in a computer.
+- Addition operation in binary represented by a half-adder circuit.
+  ![Half Adder Circuit](https://remnote-user-data.s3.amazonaws.com/JvRJd59EtwAUMpy6uhL7FXDgwy0apF2piOBiUnNVf4Q_zcl8_anG8n7XY2l4URDhrLWMLx3n7fkbMHQkGdCUN05TPrJm7Y0D4by6jyW8dTEp5pyoLmXfWH_G0jNiuW1H.png)
+- Full-adder circuit needed for adding numbers with carries.
 
-You will have a problem, the next time you have to add two numbers, and you have to carry one, you will have to add 3 numbers instead. You have to build a full-adder
-https://remnote-user-data.s3.amazonaws.com/-q6IvaJjH-xNZqcGKaCo5TwiuigQV0Kbs-yCvDnFgma41pUT1_28LDc2iQEQ-Hep2hlVgYC-AoDVPZDjxXMUrZ6mRhqPKuJFbBsCLGxMCNnbQRSGXM_p4XS0proV2bnP.png
-https://remnote-user-data.s3.amazonaws.com/sMeljOED6jyt2VMs8EdY_QO4SVdPawb71TNTBAssWqakloiYLRPzPqgj9Ul_f0xwVFaKp_18BIUhYTuT2VkGsg7Dke-WbesdnHo22y0nswMpVPnTXhmQY0TwNED9RnX-.png
-You have 3 inputs per addition and two results, the sum of the 3 numbers and if you have to carry 1.
+### Logic Unit
+- Performs logical operations like AND, OR, and NOT on binary inputs.
+- Essential for decision-making and data manipulation during computations.
 
-And then to create an  8-bit sum.
-https://remnote-user-data.s3.amazonaws.com/LBWQrr5-xjmXUyG227UHCTbEjNSIgQH7udApJFLAJej0m-5GtFYJI3fP8KtvtY5RDXyoBWrccniJQQalB1ghsMdVyp0kvhJMKBS__CwKZxChCmmIJy5Y3PvcnHVeJ_Q8.png
-An overflow happens when the last carry value is 1, which means that 8 bits would not be enough to represent the result, and the sum will probably return an error.
+# Registers, RAM, and Memory Addressing
 
+## Logic Circuits for Memory
+- Two useful circuits: AND-OR latch and gated latch.
+- Used for saving data and creating memory, essential components of RAM.
 
-Logic unit  
-The logic unit in the ALU performs logical operations such as AND, OR, and NOT on binary inputs. It combines input bits according to specified logic operations and produces corresponding output bits. These logical operations are essential for decision-making and data manipulation within the CPU during arithmetic and logical computations.
+### AND-OR Latch
+- Saves 0 or 1 into a circuit, basic unit of memory.
 
+### Gated Latch
+- Allows control over data storage with write enable circuit.
 
-Finally, you will want to create a new level of abstraction that allows you to think in more high level terms. In this case, you will have the entire ALU.
-https://remnote-user-data.s3.amazonaws.com/hTfeNDalLe7YzuSTMIt2LaSJfYCl8h5_elBz6yfSo71rIOiP4aUjgNeAo1F4VhhnIdRRDLXVk7iutYvc9W5OLNWasp0_IF3joQIf87kWLWwH6ODwwKqOXVjNqcsQMDoh.png
+## Memory Addressing
+- Data stored in latches with addresses for access.
+- Addressing managed by multiplexers, enabling row and column selection.
 
+### Matrix Memory
+- Matrix of latches used for scalable memory storage.
+- Utilizes shared wires for addressing and data transfer, minimizing wiring.
 
-Registers and RAM
-How to use logic circuits to create memory?
-There are two logic circuits that are really useful to save data and create memory. They are called a and-or latch and a gated latch, the first one is to explain and the second one is used in RAMs.
-Basically the AND-OR latch circuit allows you to save a 0 or 1 into a circuit.
-https://remnote-user-data.s3.amazonaws.com/EXBeZTIijglYtlbJUgrnkQImGOhF0okE-qXByhVZ3kQtJH4itAQOcM1MzsBfSzEW1RQbMJvPINJokim2QbtN25Cr5Q1RzXHJbLTWirV57Amv_phjLPYM1L2ubWZYXI6s.png
+## Random Access Memory (RAM)
+- Temporary storage for data and instructions required by the CPU.
+- Facilitates rapid data retrieval and storage, crucial for program execution.
 
+# Central Processing Unit (CPU) and Program Execution
 
-The gated-latch is more complete and allows you to control if the change can be done or not with a write enable circuit attatched to a circuit that stores a bit.
-https://remnote-user-data.s3.amazonaws.com/2VWSy6Jg4Qr7uSICq756akPKBQis22pu0YJz8ChedH1c0DM5qmoao6GGaleDd5O535bly15SWLysPziP9Uoduawb27ZTS9zt85gR0EP0_LTgDY8zUQyh9ttw0bIFUxCY.png
+## CPU Components
+- RAM stick, memory registers, instruction address register (IAR), and instruction register (IR).
 
-If you put 8 latches side by side you can store 8 bits of information or a byte, like an 8bit number. A group of latches operating like this is called a register, which holds a single number. Today you have registers of 32bits or 64bits
+### CPU Registers
+- Temporary storage for manipulating values during program execution.
 
+## CPU Operation Phases
+1. **Fetch Phase**:
+   - Retrieves instructions from RAM based on IAR.
+2. **Decode Phase**:
+   - Interprets binary instruction code, extracting opcode and data address.
+3. **Execute Phase**:
+   - Carries out the operation specified by the decoded instruction.
 
-Now let's build something that can store more data. To do this we can use a matrix.
-16x16 latch matrix
-https://remnote-user-data.s3.amazonaws.com/XgaPX4n2uYNGyPqBkjhYtm1HTa1ULoNuqqzkO8dDuF6aRxf6r8oS3azOi0kFdq64_jH5zfq_1FCdnreFcR_cMCyDTV7szx19oTVEJ_u6Cz6EXPsJUrJ2v5Kb82ghbZUq.png
-https://remnote-user-data.s3.amazonaws.com/mLAc3UVofpK9z52cxorm0M-Zl_uo2huKig1xhawGaZ1EESe8pxpVBkXECIxRm1ijCOFMSorv8q4zwr2W7uA4qkiLXhJLU2Ni2ZLmHHJFBA0uhCOYmvbjmx4OTR0bAjCV.png
-This way you use the same wires you will use for every gated latch for data in/out and write enable and read enable, because the wires that select the latch will only cross one latch at a time (row - column).
-This way for 256 bits of memory you will only need 35 wires:
-1 data wire
-1 write enable wire
-1 read enable wire
-16 for rows
-16 for columns
+This cycle repeats, enabling the CPU to execute a series of instructions and perform complex computations required by the program.
 
-Memory address  
-The data stored in each latch will have an address to access it later. This address will be saved with 8 bits, 4 bits for the row address (2^4 = 32 possibilities and we only have 16 rows) and 4 for the column. Let's say we want to read the data in the latch row 12 and column 8, that would be 11001000 (1100 = 12, 1000 = 0). The component that receives the address and selects the row and column is called multiplexer (you select the row and the column and then you perform the operation).
-If you add the matrix and the multiplexer with all of the other stuff we have talked about you have a 256 bit memory component. This component will need 8 wires to share the address, a write enable wire, a read enable wire and a data wire.
-https://remnote-user-data.s3.amazonaws.com/djjz0s7qHSM2RMvj8LvWL8fODYw-mFlmwsR6zjefU007uDN5ubArzQ6G2qbPK6VlNEJtSBoqwn9U7CTTP6L5pKbiO5IKfYRBaPPUznF7xp62fJ1kCQNoV7LaX1PzwLm7.png
-
-To scale this up, we need to put them 8 of them in a row.
-https://remnote-user-data.s3.amazonaws.com/qRqcyaJyfa_KrWaHsjgEdzwZeVYm4gL98WwZXKZT3iCZJyy_jzvOs-HFbrO0Yc2ASnRFzsRqAp_FQw5dzLJr1WXxHDVP1Ehf9RmV_kvVxa8ls371tfPFA1HyVYTL-z43.png
-This way if you want to store an 8bit number you:
-Turn on the write enable wire
-Send the memory address of the number you want to store and the multiplexer will select the same latch in every 256-bit memory component.
-Give one bit of data wire to each of the 8 components of 256-bit memory.
-Store one bit of data in each component.
-Then if you want to retrieve the number send the memory address and the system will return bit by bit your number.
-Let's say that you want to store the number 11001110. This component will:
-Turn the write enable wire
-Save the first bit (1) in the first 256-bit memory component  in the address rc (row-column).
-Save the second bit (1) in the second 256-bit memory component  in the address rc (row-column).
-Save the third bit (0) in the third 256-bit memory component  in the address rc (row-column).
-...
-Save the eight bit (0) in the eight 256-bit memory component  in the address rc (row-column).
-turn off the write enable wire.
-
-Let's say that you want to retrieve the number in the address 11001000. This component will:
-Specify the address (row-column) from which you want to retrieve the information.
-Turn on the read enable wire to allow reading from the memory components.
-Access the specified address in each of the 256-bit memory components.
-Retrieve the bit stored at each address in sequence, from the first to the eighth component.
-    Retrieve the bit stored in the first 256-bit memory component at the address rc (row-column).
-    Retrieve the bit stored in the second 256-bit memory component at the address rc (row-column).
-    Retrieve the bit stored in the third 256-bit memory component at the address rc (row-column).
-    ...
-    Retrieve the bit stored in the eighth 256-bit memory component at the address rc (row-column).
-Assemble the retrieved bits into the desired data format (e.g., binary, decimal, etc.).
-Turn off the read enable wire once retrieval is complete.
-
-We will concieve it like this:
-https://remnote-user-data.s3.amazonaws.com/g0lTtJD6ZlCwfdm7_jWhQj6aaGobMVSXWzjYzuaWdhNnKrSBXaBaqpMS1E89bX1rG3573XASODbi_PQWducHa9Y3sZ9ZGtzdOrcjSSdMzOquhAh73jpUPCvGr4zIorok.png
-Basically if the cpu says "bring the address 12" it will execute everything above and bring the entire 8-bit number.
-
-Let's see a real computer now.
-What is a RAM?   
-RAM (Random Access Memory) in a computer serves as temporary storage for data and program instructions that the CPU (Central Processing Unit) needs to access quickly. It allows the CPU to rapidly retrieve and store information for immediate use, facilitating smooth and efficient operation of programs and processes. RAM is volatile memory, meaning it loses its data when power is turned off, unlike storage devices such as hard drives or SSDs which retain data even when the power is off.
-
-This a stick of RAM with 8 memory modules solded onto the board.
-https://remnote-user-data.s3.amazonaws.com/2prZA-CerM0qMa6giANPPKMEneCK4WT9PoOQwlOe7W-ib0_LfUtHGKhL46mVjp2GAMzH6veiCvYcfKB_icT7mBbswrC6qtbiCY0_iH7n3YvBdJyOep_WGuJHpgymlYli.png
-If you zoom in, every memory module looks like this. This one has 32 squares of memory.
-https://remnote-user-data.s3.amazonaws.com/nUPX5y_Er016J6df_gqg9AFJFTRLOoH0Kw4GCajHShNuegQzYIob3d39aFRGgFMI4PV4MzcAC_vnWcGTjTATDSSMTCrUVTkryaDhuL-WTVgWwBWkBnDVGKfKLm7YQrmf.png
-
-If you zoom in each square of memory you will see that each one is composed of 4 blocks
-https://remnote-user-data.s3.amazonaws.com/9BxISSuQmMn6mZEzMPmJOXDY6dqQ0SBydMrRamgsrVIume1SCBJpJ7MjvO1jCGvatuM-y5125CBt_DTxfUYizfYKhM30esmHFkft359GjltKJ6m4jG-63S8s-4ssSQfi.png
-And if you zoom again, you get down into the matrix of individual bits. This is a matrix of 128x64 bits. That's 8192 bits in total. If you do the math you will see:
-8192 * 4 blocks = 32768.
-Each chip has 32 squares which means 32 * 32768 = 1048576
-Each stick (ram module) of memory has 8  chips which means 8 * 1048576 = 8388608 bits = 1 megabyte
-
-
-
-The central processing unit (CPU)
-What is the CPU and what does it do?
-A CPU's job is to execute programs.
-Programs are made up of a series of individual operations called instructions (because they instruct the computer what to do)
-
-Let's give the processor 4 8-bit memory registers which will be used to temporarily store and manipulate values.
-Programs can be stored in memory too.
-We assign an ID to each instruction supported by our cpu
-The first column is the ID of the instruction
-The third column is the 4-bit operation code
-The fourth column is the Address or Register specifies where the DATA for that operation should come from. So you have an operation to do with x and y data
-The first column tells you which operation you want to do
-The third one tells you how to tell the machine which operation to do
-The fourth column tells the pc where to get the data for that operation.
-https://remnote-user-data.s3.amazonaws.com/-DTrpEGonS67ZKWMSXZ0DXv164AaP6Gfsbkxc3KfMr8qwYutCAthC8OoIlKRLQfR-w0MlWVvza5f2LuAAzLVXlAyDbjTQ74_xlQOkC0SkK_eD4xSHVw7R4onDcgFyOWp.png
-
-
-To create a CPU we need: 
-A stick of ram
-4 memory registers to store and manipulate data temporarily
-1 register to keep track where we are in a program, called an "instruction address register". Basically stores the memory address of the current instruction.
-1 register to store the current instruction called a "instruction register" (NOT THE MEMORY  ADDRESS OF THE CURRENT INSTRUCTION)
-
-
-Computer stage/phase 
-In the first phase of the cpu's operations is called the "fetch phase"
-Fetch:
-CPU retrieves instructions from computer memory (RAM).
-Instructions are stored sequentially in memory.
-CPU fetches instructions based on the program counter (instruction address register IAR) .
-Example:
-Let's say that the IAR says "00001000". The cpu retrieves the data from the RAM in that address and places it in the IR (instruction register).
-Decode:
-CPU interprets the binary instruction code.
-CPU divides the number in two: the first 4 bits are the OPCODE (operation code) and the next 4-bits are the RAM memory address of the data the operation requires.
-The Control unit decodes and interprets the instructions. It does not have a logic gate to check each operation code, it's more complex than that, but in the image we will exemplify with an individual logic gate to simplify. In real case scenarios it does not make sense to have 300 individual logic gates (circuits) and make each operations code to run through all of them to check which one is equal, instead, they have complex circuits which output corresponds with the wire that will execute the operation code (or something like that, technically it sends a signal that makes the execute phase know which actions has to take or something like that).
-Execute:
-CPU carries out the operation specified by the decoded instruction.
-Can involve arithmetic or logical calculations, data movement, or control transfer.
-May access data from memory or perform other operations required by the instruction.
-After execution, the cycle repeats with the CPU fetching the next instruction from memory. The Instruction adress Register acts like an accumulator and adds one to the number it has. This continuous cycle enables the CPU to execute a series of instructions, performing complex computations and tasks required by the program.
 
 Example step by step:
 Assumptions:
