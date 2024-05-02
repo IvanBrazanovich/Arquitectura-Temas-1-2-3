@@ -2,75 +2,75 @@
 
 # Tema 1: 
 - **Arquitectura Von Neumann**
-- Central processing unit (CPU) sequentially processes instructions stored in memory.
-- It emphasizes the concept of stored-program computers, where both instructions and data are stored in the computer's memory.
-- **Key Components: ** 
-    - Central Processing Unit (CPU):
-    - Memory:
-    - Input/Output (I/O) Devices:
-    - Control Unit:
+    - Central processing unit (CPU) sequentially processes instructions stored in memory.
+    - It emphasizes the concept of stored-program computers, where both instructions and data are stored in the computer's memory.
+    - **Key Components: ** 
+        - Central Processing Unit (CPU):
+        - Memory:
+        - Input/Output (I/O) Devices:
+        - Control Unit:
 - **Microprocessor. Microcontroller**
-- **Microprocessor:**
-    - Central processing unit (CPU) on a single integrated circuit (IC).
-    - Handles processing tasks in computers and other electronic devices.
-    - General purpose
-    - Examples: Intel Core series, AMD Ryzen series.
-- **Microcontroller:**
-    - Specific purpose
-    - Integrated circuit containing a CPU, memory, and programmable input/output peripherals.
-    - Used in embedded systems, robotics, automotive applications.
-    - Examples: Arduino, PIC, AVR.
+    - **Microprocessor:**
+        - Central processing unit (CPU) on a single integrated circuit (IC).
+        - Handles processing tasks in computers and other electronic devices.
+        - General purpose
+        - Examples: Intel Core series, AMD Ryzen series.
+    - **Microcontroller:**
+        - Specific purpose
+        - Integrated circuit containing a CPU, memory, and programmable input/output peripherals.
+        - Used in embedded systems, robotics, automotive applications.
+        - Examples: Arduino, PIC, AVR.
 - **Subroutines**
-- Also known as procedures, functions, or methods.
-- Segments of code that perform specific tasks and can be reused throughout a program.
-- Enhance modularity, readability, and maintainability of code.
-- Called by a program whenever needed and can return a value to the calling code.
+    - Also known as procedures, functions, or methods.
+    - Segments of code that perform specific tasks and can be reused throughout a program.
+    - Enhance modularity, readability, and maintainability of code.
+    - Called by a program whenever needed and can return a value to the calling code.
 - **Low-level languages**
-- Closer to machine code and hardware.
-- Directly manipulates hardware resources.
-- Requires a deeper understanding of computer architecture.
-- Examples: Assembly language, machine code.
+    - Closer to machine code and hardware.
+    - Directly manipulates hardware resources.
+    - Requires a deeper understanding of computer architecture.
+    - Examples: Assembly language, machine code.
 - 
 - **Técnicas de direccionamiento** 
-- Immediate Addressing
-- Direct Addressing
-- Indirect Addressing
-- Register Addressing
-- Register indirect
-- Stack or implicit
-- Relative Addressing
-    - Base or Displacement Addressing
-    - Por referencia al programa
-    - Por página o yuxtaposición
-- Indexed Addressing
+    - Immediate Addressing
+    - Direct Addressing
+    - Indirect Addressing
+    - Register Addressing
+    - Register indirect
+    - Stack or implicit
+    - Relative Addressing
+        - Base or Displacement Addressing
+        - Por referencia al programa
+        - Por página o yuxtaposición
+    - Indexed Addressing
 - 
 - **Memory** 
-- **Memory**:
-    - Fundamental component of computing systems.
-    - Essential for storing and retrieving data and instructions.
-    - Types include RAM (Random Access Memory) and ROM (Read-Only Memory).
-- **Memory Hierarchy**:
-    - Organizational structure of memory in a computer system.
-    - Comprises different levels with varying speeds, capacities, and costs.
-    - Examples include cache memory, main memory (RAM), and secondary storage (hard drives, SSDs).
-- **Words**:
-    - Basic units of data storage in a computer's memory.
-    - Typically represented as a fixed number of bits (e.g., 8 bits = 1 byte).
-    - Word size varies across computer architectures and influences memory capacity and processing speed.
-- **Addressable Memory**:
-    - Ability to locate and access specific memory locations.
-    - Each memory cell in a computer's memory has a unique address.
-    - Addressable memory size is determined by the number of unique addresses that can be assigned.
-- **Data Storage Units**:
-    - Measurement units used to quantify digital data storage capacity.
-    - Common units include bits, bytes, kilobytes, megabytes, gigabytes, terabytes, etc.
-    - Storage capacity increases exponentially with each unit, from smallest to largest.
-- **Cache:** 
-    - High-speed memory located between the CPU and main memory.
-    - Used to temporarily store frequently accessed data and instructions, speeding up the computer's performance.
-- **Virtual Memory:** 
-    - Technique that extends the computer's physical memory by utilizing secondary storage (e.g., hard disk) as an extension of RAM.
-    - Allows the system to run programs larger than the available physical memory by swapping data between RAM and disk storage.
+    - **Memory**:
+        - Fundamental component of computing systems.
+        - Essential for storing and retrieving data and instructions.
+        - Types include RAM (Random Access Memory) and ROM (Read-Only Memory).
+    - **Memory Hierarchy**:
+        - Organizational structure of memory in a computer system.
+        - Comprises different levels with varying speeds, capacities, and costs.
+        - Examples include cache memory, main memory (RAM), and secondary storage (hard drives, SSDs).
+    - **Words**:
+        - Basic units of data storage in a computer's memory.
+        - Typically represented as a fixed number of bits (e.g., 8 bits = 1 byte).
+        - Word size varies across computer architectures and influences memory capacity and processing speed.
+    - **Addressable Memory**:
+        - Ability to locate and access specific memory locations.
+        - Each memory cell in a computer's memory has a unique address.
+        - Addressable memory size is determined by the number of unique addresses that can be assigned.
+    - **Data Storage Units**:
+        - Measurement units used to quantify digital data storage capacity.
+        - Common units include bits, bytes, kilobytes, megabytes, gigabytes, terabytes, etc.
+        - Storage capacity increases exponentially with each unit, from smallest to largest.
+    - **Cache:** 
+        - High-speed memory located between the CPU and main memory.
+        - Used to temporarily store frequently accessed data and instructions, speeding up the computer's performance.
+    - **Virtual Memory:** 
+        - Technique that extends the computer's physical memory by utilizing secondary storage (e.g., hard disk) as an extension of RAM.
+        - Allows the system to run programs larger than the available physical memory by swapping data between RAM and disk storage.
 - 
 - 
 - **I/O** 
